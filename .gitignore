@@ -1,0 +1,21 @@
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# MkDocs build directory
+site/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Operating System files
+.DS_Store
+Thumbs.db

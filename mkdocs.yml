@@ -1,0 +1,92 @@
+site_name: Agentes de IA — Grandes Debates Nacionais
+site_description: Portal de documentação e consensos gerados por debates entre agentes de inteligência artificial sobre os rumos do Brasil.
+site_author: Antonio Novaes Jr.
+repo_name: antonionovaesjr/agentes-de-ia
+repo_url: https://github.com/antonionovaesjr/agentes-de-ia
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    # Modo Claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Alternar para modo escuro
+    # Modo Escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Alternar para modo claro
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.instant
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+
+nav:
+  - Início: index.md
+  - Metodologia: metodologia.md
+  - Debatedores: debatedores.md
+  - Economia Brasil 2030:
+      - Visão Geral: economia/index.md
+      - Proposta de Consenso: economia/consenso.md
+      - Debate Completo (10 Rodadas): economia/debate.md
+  - Educação Brasil 2030:
+      - Visão Geral: educacao/index.md
+      - Proposta de Consenso: educacao/consenso.md
+      - Debate Completo (10 Rodadas): educacao/debate.md
